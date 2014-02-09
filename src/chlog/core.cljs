@@ -19,8 +19,9 @@
     (= "-h" (first args))))
 
 (defn print-changelog [repos]
-  (let [ps (require "child_process")]
-    (.exec ps "curl -s https://raw.github.com/tech-angels/vandamme/master/CHANGELOG.md" #(println %2))))
+  (let [ps (require "child_process")
+        repos-url (str "https://raw.github.com/" repos "/master/railties/CHANGELOG.md")]
+    (.exec ps (str "curl -s " repos-url) #(println %2))))
 
 (defn start [& args]
   (if (print-usage? args)
