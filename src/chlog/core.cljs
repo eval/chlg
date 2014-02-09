@@ -1,4 +1,5 @@
-(ns chlog.core)
+(ns chlog.core
+  (:use [cljs.nodejs :only [require]]))
 
 (defn print-usage []
   (println "
@@ -17,8 +18,13 @@
     (not (seq args))
     (= "-h" (first args))))
 
+(defn print-changelog [repos]
+  (let [ps (require "child_process")]
+    (.exec ps "curl -s https://raw.github.com/tech-angels/vandamme/master/CHANGELOG.md" #(println %2))))
+
 (defn start [& args]
   (if (print-usage? args)
-    (print-usage)))
+    (print-usage)
+    (print-changelog (first args))))
 
 (set! *main-cli-fn* start)
