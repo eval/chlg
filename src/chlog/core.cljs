@@ -13,7 +13,9 @@
 "))
 
 (defn print-usage? [args]
-  (= "-h" (first args)))
+  (or
+    (not (seq args))
+    (= "-h" (first args))))
 
 (defn start [& args]
   (if (print-usage? args)
