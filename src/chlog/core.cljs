@@ -38,7 +38,10 @@
 (defn repos-files [json]
   (map #(aget % "path") (aget json "tree")))
 
-(defn changelog-path [repos])
+(defn changelog-path [files]
+  "Select file that is considered the changelog"
+  (let [changelog-re #"(?i)changelog|history"]
+    (first (filter #(re-find changelog-re %) files))))
 
 (defn print-changelog [repos]
   ;(println (repos-files (gh-request))))
@@ -47,7 +50,7 @@
 (defn print-root-files [repos]
   (let [repos-root-files (get-tree repos)]
     (go
-      (println (repos-files (<! repos-root-files))))))
+      (println (changelog-path (repos-files (<! repos-root-files)))))))
 
 (defn start [& args]
   (if (print-usage? args)
