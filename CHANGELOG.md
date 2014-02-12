@@ -1,3 +1,7 @@
+# 0.0.3 / 2014-02-12
+
+* publish as npm module
+
 # 0.0.2 / 2014-02-12
 
 * rename chlog => chlg

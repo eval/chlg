@@ -1,11 +1,17 @@
 {
   "name": "chlg",
   "preferGlobal": "true",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "Quickly fetch the changelog of a github repository",
   "main": "chlg.js",
   "bin": { "chlg": "chlg.js" },
+  "homepage": "https://github.com/eval/chlg",
+  "authors": [
+    "Gert Goet <gert@thinkcreate.nl> (https://github.com/eval)"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/eval/chlg.git"
-  }
+  },
+  "license": "MIT"
 }
