@@ -1,0 +1,11 @@
+{
+  "name": "chlg",
+  "preferGlobal": "true",
+  "version": "0.0.2",
+  "main": "chlg.js",
+  "bin": { "chlg": "chlg.js" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eval/chlg.git"
+  }
+}

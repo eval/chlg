@@ -14,6 +14,6 @@
     :builds [{:id "chlg"
               :source-paths ["src"]
               :compiler {
-                :output-to "out/chlg.js"
+                :output-to "chlg.js"
                 :optimizations :simple
                 :target :nodejs}}]})
