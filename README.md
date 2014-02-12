@@ -25,6 +25,12 @@ $ node out/chlg.js eval/chlg
 
   Initial release
 
+# without repos-owner, the first repos found is used (feeling lucky?):
+$ node out/chlg.js devise
+
+# nicely rendered
+$ node out/chlg.js devise | pandoc | lynx -stdin
+
 # Help
 $ node out/chlg.js -h
 ```
@@ -38,4 +44,3 @@ Todo
 
 * publish as npm module
 * add tests
-* find a repository only by name (e.g. `chlog devise`)

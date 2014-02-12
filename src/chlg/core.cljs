@@ -66,7 +66,7 @@
           path (changelog-path (repos-files (<! repos-root-files)))
           changelog-content (get-content repos path)]
       (println (if path
-                  (str "Changelog of repository '" repos "':\n\n"
+                  (str "Showing '" path "' of repository '" repos "':\n\n"
                        (<! changelog-content))
                   (str "No changelog found for '" repos "'"))))))
 
