@@ -65,8 +65,10 @@
     (let [repos-root-files (get-tree repos)
           path (changelog-path (repos-files (<! repos-root-files)))
           changelog-content (get-content repos path)]
-      (println (str "Changelog of repository '" repos "':"))
-      (println (<! changelog-content)))))
+      (println (if path
+                  (str "Changelog of repository '" repos "':\n"
+                       (<! changelog-content))
+                  (str "No changelog found for '" repos "'"))))))
 
 (defn search-full-repos-name [q]
   (go
