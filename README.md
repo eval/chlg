@@ -31,3 +31,11 @@ $ node out/chlog.js -h
 
 Github's API, when used unauthenticated, has a low rate limit.
 When you have a github token ([generate one here](https://github.com/settings/tokens/new)) and it's available as ENV-variable `GH_TOKEN`, the app will automatically use it.
+
+
+Todo
+---------
+
+* publish as npm module
+* add tests
+* find a repository only by name (e.g. `chlog devise`)
