@@ -1,4 +1,4 @@
-chlog
+chlg
 ==========
 
 Show the changelog of a github repository.
@@ -19,14 +19,14 @@ Usage
 $ lein cljsbuild once
 
 # Run it
-$ node out/chlog.js eval/chlog
+$ node out/chlg.js eval/chlg
 
   # 0.0.1 / 2014-02-09
 
   Initial release
 
 # Help
-$ node out/chlog.js -h
+$ node out/chlg.js -h
 ```
 
 Github's API, when used unauthenticated, has a low rate limit.

@@ -1,4 +1,4 @@
-(defproject chlog "0.1.0-SNAPSHOT"
+(defproject chlg "0.1.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
@@ -11,9 +11,9 @@
   :source-paths ["src"]
 
   :cljsbuild { 
-    :builds [{:id "chlog"
+    :builds [{:id "chlg"
               :source-paths ["src"]
               :compiler {
-                :output-to "out/chlog.js"
+                :output-to "out/chlg.js"
                 :optimizations :simple
                 :target :nodejs}}]})

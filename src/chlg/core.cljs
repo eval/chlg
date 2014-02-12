@@ -1,4 +1,4 @@
-(ns chlog.core
+(ns chlg.core
   (:require [cljs.core.async :as async :refer [<! >! chan close! put! take! timeout]]
             [cljs.nodejs :as node]
             [clojure.string :as string])
@@ -7,10 +7,10 @@
 (defn print-usage []
   (println "
     USAGE:
-    chlog <repository>
+    chlg <repository>
 
     EXAMPLES:
-    chlog eval/chlog
+    chlg eval/chlg
     # 0.0.1 / 2014-02-9
 
     Initial release
@@ -66,7 +66,7 @@
           path (changelog-path (repos-files (<! repos-root-files)))
           changelog-content (get-content repos path)]
       (println (if path
-                  (str "Changelog of repository '" repos "':\n"
+                  (str "Changelog of repository '" repos "':\n\n"
                        (<! changelog-content))
                   (str "No changelog found for '" repos "'"))))))
 
