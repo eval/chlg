@@ -1,4 +1,4 @@
-(defproject chlg "0.1.0-SNAPSHOT"
+(defproject chlg "0.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
