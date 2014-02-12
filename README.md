@@ -1,46 +1,51 @@
 chlg
 ==========
 
-Show the changelog of a github repository.
+Quickly fetch the changelog of a github repository.
 
-Requirements
+Install
 ------------
 
-- [Leiningen](https://github.com/technomancy/leiningen)
-  `brew install leiningen`
-- [Nodejs](https://github.com/joyent/node)
-  `brew install nodejs`
+```bash
+npm install -g chlg
+```
 
 Usage
 ------------
 
 ```bash
-# Build it
-$ lein cljsbuild once
-
-# Run it
-$ node out/chlg.js eval/chlg
+$ chlg eval/chlg
 
   # 0.0.1 / 2014-02-09
 
   Initial release
 
 # without repos-owner, the first repos found is used (feeling lucky?):
-$ node out/chlg.js devise
+$ chlg devise
 
 # nicely rendered
-$ node out/chlg.js devise | pandoc | lynx -stdin
+$ chlg devise | pandoc | lynx -stdin
 
 # Help
-$ node out/chlg.js -h
+$ chlg -h
 ```
 
 Github's API, when used unauthenticated, has a low rate limit.
 When you have a github token ([generate one here](https://github.com/settings/tokens/new)) and it's available as ENV-variable `GH_TOKEN`, the app will automatically use it.
 
+Development
+------------
+
+- [Leiningen](https://github.com/technomancy/leiningen)
+  `brew install leiningen`
+
+```bash
+$ lein cljsbuild auto
+$ node chlg.js
+```
+
 
 Todo
 ---------
 
-* publish as npm module
 * add tests

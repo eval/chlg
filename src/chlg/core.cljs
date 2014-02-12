@@ -11,9 +11,14 @@
 
     EXAMPLES:
     chlg eval/chlg
-    # 0.0.1 / 2014-02-9
+      # 0.0.1 / 2014-02-9
 
-    Initial release
+      Initial release
+
+    chlg chlg
+      # 0.0.1 / 2014-02-9
+
+      Initial release
 ")
 )
 
