@@ -1,7 +1,7 @@
 {
   "name": "chlg",
   "preferGlobal": "true",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fetch the changelog of a github repository",
   "main": "chlg.js",
   "bin": { "chlg": "chlg.js" },
