@@ -1,7 +1,7 @@
 chlg
 ==========
 
-Quickly fetch the changelog of a github repository.
+Fetch the changelog of a github repository.
 
 Install
 ------------
@@ -20,7 +20,7 @@ $ chlg eval/chlg
 
   Initial release
 
-# without repos-owner, the first repos found is used (feeling lucky?):
+# without repos-owner, first search result is used (feeling lucky?):
 $ chlg devise
 
 # nicely rendered
@@ -48,4 +48,7 @@ $ node chlg.js
 Todo
 ---------
 
+* do auth-dance to acquire a token
+* fix non-master mainlines (see ansible)
+* allow to point to your gitlab install
 * add tests
