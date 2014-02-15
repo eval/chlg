@@ -62,7 +62,7 @@
     (aget (first (aget json "items")) "full_name")))
 
 (defn changelog-path [files]
-  (let [changelog-re #"(?i)changelog|history"]
+  (let [changelog-re #"(?i)change(s|log)|history"]
     (first (filter #(re-find changelog-re %) files))))
 
 (defn print-changelog [repos]
