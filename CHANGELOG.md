@@ -1,3 +1,7 @@
+# 1.0.0 / 2014-09-15
+
+* support changelogs named `news.*` and `releases.*`
+
 # 0.1.0 / 2014-02-15
 
 * files in the repository's root named `changes`, `changelog` and `history` (whatever case, whatever extension) are now considered as changelog.
